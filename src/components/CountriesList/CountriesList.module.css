@@ -1,0 +1,75 @@
+.wrap {
+    margin: 0px 10px;
+}
+
+.heading {
+    display: flex;
+    margin-top: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: inherit;
+}
+
+.heading button {
+    flex: 4;
+    border: none;
+    color: var(--text-color);
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    background-color: inherit;
+
+}
+
+.headingName {
+    text-align: left;
+    display: flex;
+}
+
+.headingPop, .headingArea, .headingGini {
+    display: flex;
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+    text-align: center;
+    padding: 20px;
+    background-color: var(--background-color-light);
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    transition: transform 200ms ease-in-out;
+    cursor: pointer;
+}
+
+.row:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.17);
+}
+
+.countryShort, .population, .area, .gini {
+    flex: 4;
+}
+
+.name {
+    text-align: left;
+}
+
+.countryShort {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.flag {
+    width: 3rem;
+    margin-right: 15px;
+    border-radius: 3px;
+}
+
+@media screen and (max-width: 720px) {
+    .area, .gini, .headingArea, .headingGini {
+        display: none;
+    }
+}

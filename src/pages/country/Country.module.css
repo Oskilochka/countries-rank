@@ -1,0 +1,114 @@
+/*Main Info*/
+.wrap {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--background-color-light);
+    box-shadow: var(--box-shadow);
+    max-width: 1000px;
+    margin: 0px 25px;
+}
+
+.wrap img {
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    width: 100%;
+}
+
+.name {
+    text-align: center;
+    margin: 20px 0px 10px 0px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.region {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.numbers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    text-align: center;
+}
+
+.value {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.label {
+    font-size: 17px;
+    color: var(--text-color-secondary);
+    margin: 10px 0px;
+}
+.areaSup {
+    font-size: 10px;
+}
+
+/*Details*/
+.details {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.detailsHeader {
+    text-align: left;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.detailsLabel {
+    font-weight: 600;
+    font-size: 17px;
+    color: var(--text-color-secondary);
+}
+
+.detailsRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--text-color-secondary);
+    padding: 10px 0px;
+}
+
+.detailsValue {
+    font-weight: 600;
+    font-size: 17px;
+    text-align: right;
+}
+
+/*Neighbour countries*/
+.bordersWrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 24px;
+}
+
+.border {
+    margin-top: 30px;
+}
+
+.borderName {
+    text-align: center;
+    margin: 10px 0px;
+    font-weight: 600;
+}
+
+@media screen and (min-width: 720px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    .details {
+        grid-column: 5 / span 8;
+        margin-top: 0;
+    }
+
+    .left {
+        grid-column: 1 / span 4;
+    }
+}
