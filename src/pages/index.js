@@ -1,35 +1,41 @@
-import {Layout} from "../components/Layout/Layout";
-import {SearchInput} from "../components/SearchInput/SearchInput";
-import {CountriesList} from "../components/CountriesList/CountriesList";
-import {useState} from "react";
+import { Layout } from "../components/Layout/Layout";
+import { SearchInput } from "../components/SearchInput/SearchInput";
+import { CountriesList } from "../components/CountriesList/CountriesList";
+import { useState } from "react";
 
-export default function Home({countries}) {
+export default function Home({ countries }) {
+  const [ keyword, setKeyword ] = useState("");
 
-    const [input, setInput] = useState('')
-    const filteredCountries = countries.filter(country =>
-        country.name.toLowerCase().includes(input) ||
-        country.region.toLowerCase().includes(input) ||
-        country.subregion.toLowerCase().includes(input)
-    )
-    const onInputChange = (e) => {
-        e.preventDefault()
-        setInput(e.target.value.toLowerCase())
-    }
+  const filteredCountries = countries && countries.filter(
+    (country) =>
+      country.name.toLowerCase()
+        .includes(keyword) ||
+      country.region.toLowerCase()
+        .includes(keyword) ||
+      country.subregion.toLowerCase()
+        .includes(keyword),
+  );
 
-    return (
-        <Layout>
-            <SearchInput onChange={onInputChange}/>
-            <CountriesList countries={filteredCountries}/>
-        </Layout>
-    )
+  const onInputChange = (e) => {
+    e.preventDefault();
+    setKeyword(e.target.value.toLowerCase());
+  };
+
+  return (
+    <Layout>
+      <SearchInput onChange={onInputChange} />
+      <CountriesList countries={filteredCountries} />
+    </Layout>
+  );
 }
 
 export const getStaticProps = async () => {
-    const res = await fetch('https://restcountries.eu/rest/v2/all')
-    const countries = await res.json()
-    return {
-        props: {
-            countries
-        }
-    }
-}
+  const res = await fetch("https://restcountries.com/v2/all");
+
+  const countries = await res.json();
+  return {
+    props: {
+      countries,
+    },
+  };
+};

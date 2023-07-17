@@ -1,5 +1,5 @@
 .wrap {
-    margin: 0px 10px;
+    margin: 0 10px;
 }
 
 .heading {
@@ -18,7 +18,6 @@
     cursor: pointer;
     outline: none;
     background-color: inherit;
-
 }
 
 .headingName {
@@ -33,6 +32,7 @@
 
 .row {
     display: flex;
+    align-items: center;
     text-align: center;
     padding: 20px;
     background-color: var(--background-color-light);
@@ -45,7 +45,7 @@
 
 .row:hover {
     transform: translateY(-5px);
-    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.17);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.17);
 }
 
 .countryShort, .population, .area, .gini {

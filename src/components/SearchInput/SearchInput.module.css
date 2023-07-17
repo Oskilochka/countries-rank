@@ -5,19 +5,20 @@
     justify-content: center;
     background-color: var(--background-color-light);
     border-radius: 10px;
+    border: 1px dashed var(--text-color-secondary);
 }
 
 .searchInput {
     width: 100%;
     height: 100%;
-    border: none;
-    color: var(--text-color-secondary);
-    padding: 10px 25px;
+    color: var(--text-color);
+    padding: 10px 25px 10px 5px;
     background-color: transparent;
     outline: none;
     border-radius: 10px;
+    border: none;
 }
 
-.wrap .searchInput:focus {
-    background-color: #3b3b3b;
+.wrap:focus-within {
+    border: 1px solid var(--primary-color);
 }

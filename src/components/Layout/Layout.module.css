@@ -10,7 +10,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px 0px;
+    margin: 40px 0;
 }
 
 .headerWrap {
@@ -24,13 +24,15 @@
 }
 
 .headerLogo {
-    width: 55px;
-    height: 50px;
+    width: 50px;
+    height: 40px;
+    filter: var(--logo-filter);
 }
 
 .headerTitle {
     font-size: 23px;
     font-weight: bold;
+    margin: 0 12px;
 }
 
 .themeToggle {
@@ -55,7 +57,7 @@
 }
 
 .footerGit:hover {
-    color: darkblue;
+    color: var(--primary-color);
 }
 
 .footerInfo {

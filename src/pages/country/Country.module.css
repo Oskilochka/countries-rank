@@ -5,7 +5,7 @@
     background-color: var(--background-color-light);
     box-shadow: var(--box-shadow);
     max-width: 1000px;
-    margin: 0px 25px;
+    margin: 0 25px;
 }
 
 .wrap img {
@@ -16,7 +16,7 @@
 
 .name {
     text-align: center;
-    margin: 20px 0px 10px 0px;
+    margin: 20px 0 10px 0;
     font-size: 30px;
     font-weight: bold;
 }
@@ -42,7 +42,7 @@
 .label {
     font-size: 17px;
     color: var(--text-color-secondary);
-    margin: 10px 0px;
+    margin: 10px 0;
 }
 .areaSup {
     font-size: 10px;
@@ -71,7 +71,7 @@
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid var(--text-color-secondary);
-    padding: 10px 0px;
+    padding: 10px 0;
 }
 
 .detailsValue {
@@ -93,7 +93,7 @@
 
 .borderName {
     text-align: center;
-    margin: 10px 0px;
+    margin: 10px 0;
     font-weight: 600;
 }
 
